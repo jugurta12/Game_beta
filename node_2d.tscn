@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://d2r5l8ox4fm1g"]
+[gd_scene load_steps=2 format=3 uid="uid://d2r5l8ox4fm1g"]
+
+[ext_resource type="Script" uid="uid://bahi6t6yf2ls6" path="res://character_body_2d.gd" id="1_wtcfe"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -7,6 +9,7 @@
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="StaticBody2D"]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_wtcfe")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 
