@@ -1,12 +1,32 @@
-[gd_scene load_steps=7 format=3 uid="uid://cx4dlpvswu4rk"]
+[gd_scene load_steps=13 format=3 uid="uid://cx4dlpvswu4rk"]
 
 [ext_resource type="Script" uid="uid://cbp2rxwn57yxd" path="res://Script/Squelette.gd" id="1_0cdqg"]
 [ext_resource type="Texture2D" uid="uid://ovwavc5dqw4a" path="res://Assets/skeleton-red_eyes-NESW.png" id="2_bdpmr"]
+[ext_resource type="Texture2D" uid="uid://8wspthki6xnf" path="res://Assets/demon_skeleton-NESW.png" id="2_g3jh4"]
 [ext_resource type="Texture2D" uid="uid://of5lr0tfsrnt" path="res://Assets/skeleton-red_eyes-NESW copie.png" id="3_qfg6d"]
+[ext_resource type="Texture2D" uid="uid://bb1vxpv5233gv" path="res://Assets/demon_skeleton-NESW copie.png" id="3_uxel8"]
 [ext_resource type="Texture2D" uid="uid://dldacnqk77i2j" path="res://Assets/skeleton-red_eyes-NESW copie 2.png" id="4_okn3i"]
+[ext_resource type="Texture2D" uid="uid://1egpaf86smel" path="res://Assets/demon_skeleton-NESW copie 2.png" id="4_p0sf5"]
+[ext_resource type="Texture2D" uid="uid://b3nq5enrjkv0l" path="res://Assets/warrior_skeleton-NESW copie.png" id="8_64xer"]
+[ext_resource type="Texture2D" uid="uid://c2xg1oawrtfnp" path="res://Assets/warrior_skeleton-NESW copie 2.png" id="9_0bmj4"]
+[ext_resource type="Texture2D" uid="uid://b8pvoqxkk7iff" path="res://Assets/warrior_skeleton-NESW copie 3.png" id="10_da8ci"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4xw0r"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_g3jh4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_uxel8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_p0sf5")
+}],
+"loop": true,
+"name": &"redSquelette",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_bdpmr")
@@ -18,13 +38,27 @@ animations = [{
 "texture": ExtResource("4_okn3i")
 }],
 "loop": true,
-"name": &"walk",
+"name": &"squeletteRedEyes",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_64xer")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_0bmj4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_da8ci")
+}],
+"loop": true,
+"name": &"warriorSquelette",
 "speed": 5.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_w8alu"]
 radius = 25.0
-height = 70.0
+height = 82.0
 
 [node name="Squelette" type="RigidBody2D"]
 position = Vector2(403, 210)
@@ -38,8 +72,8 @@ texture_filter = 1
 position = Vector2(-3.61113, -3.84433)
 scale = Vector2(1.60069, 1.48409)
 sprite_frames = SubResource("SpriteFrames_4xw0r")
-animation = &"walk"
-frame_progress = 0.10243
+animation = &"redSquelette"
+frame_progress = 0.439386
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
 
