@@ -51,21 +51,22 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0h7mo"]
 radius = 14.0
-height = 50.0
+height = 66.0
 
 [node name="Character" type="Area2D"]
-position = Vector2(237, 651)
+position = Vector2(240, 653)
 script = ExtResource("1_qjden")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(-2.14577e-06, -1.25)
-scale = Vector2(1, 0.94898)
+position = Vector2(-5.5, -11.5)
+scale = Vector2(1.30556, 1.36735)
 sprite_frames = SubResource("SpriteFrames_x0ka3")
 animation = &"walk_r"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4, -11)
 shape = SubResource("CapsuleShape2D_0h7mo")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

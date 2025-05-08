@@ -34,11 +34,12 @@ script = ExtResource("1_0cdqg")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-7, -8.25)
-scale = Vector2(1.38889, 1.31132)
+texture_filter = 1
+position = Vector2(-3.61113, -3.84433)
+scale = Vector2(1.60069, 1.48409)
 sprite_frames = SubResource("SpriteFrames_4xw0r")
 animation = &"walk"
-frame_progress = 0.900154
+frame_progress = 0.10243
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
 
