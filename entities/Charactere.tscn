@@ -1,0 +1,71 @@
+[gd_scene load_steps=10 format=3 uid="uid://h7dpc6ui1qw8"]
+
+[ext_resource type="Texture2D" uid="uid://crs3yjnof28xo" path="res://Assets/perso_final copie.png" id="1_kdubu"]
+[ext_resource type="Script" uid="uid://yc7w4j1i2x01" path="res://Script/Character.gd" id="1_qjden"]
+[ext_resource type="Texture2D" uid="uid://dade83tacckvu" path="res://Assets/perso_final copie 3.png" id="2_d21ai"]
+[ext_resource type="Texture2D" uid="uid://draes5v1wl7nv" path="res://Assets/perso_chroma_requiem (55) copie 4.png" id="3_rj586"]
+[ext_resource type="Texture2D" uid="uid://bsgcqc7vl72g5" path="res://Assets/perso_chroma_requiem (55) copie 5.png" id="4_4d7sh"]
+[ext_resource type="Texture2D" uid="uid://88n6g5yhktu" path="res://Assets/perso_chroma_requiem (55) copie 3.png" id="5_ir8iy"]
+[ext_resource type="Texture2D" uid="uid://bl4rbhf7i26qa" path="res://Assets/perso_chroma_requiem (55) copie 2.png" id="6_hqns4"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x0ka3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_kdubu")
+}],
+"loop": true,
+"name": &"default_l",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_d21ai")
+}],
+"loop": true,
+"name": &"default_r",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_rj586")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_4d7sh")
+}],
+"loop": true,
+"name": &"walk_l",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_ir8iy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_hqns4")
+}],
+"loop": true,
+"name": &"walk_r",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0h7mo"]
+radius = 14.0
+height = 50.0
+
+[node name="Character" type="Area2D"]
+position = Vector2(237, 651)
+script = ExtResource("1_qjden")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-2.14577e-06, -1.25)
+scale = Vector2(1, 0.94898)
+sprite_frames = SubResource("SpriteFrames_x0ka3")
+animation = &"walk_r"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_0h7mo")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

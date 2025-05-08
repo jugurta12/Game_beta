@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://cx4dlpvswu4rk"]
+
+[ext_resource type="Script" uid="uid://cbp2rxwn57yxd" path="res://Script/Squelette.gd" id="1_0cdqg"]
+[ext_resource type="Texture2D" uid="uid://ovwavc5dqw4a" path="res://Assets/skeleton-red_eyes-NESW.png" id="2_bdpmr"]
+[ext_resource type="Texture2D" uid="uid://of5lr0tfsrnt" path="res://Assets/skeleton-red_eyes-NESW copie.png" id="3_qfg6d"]
+[ext_resource type="Texture2D" uid="uid://dldacnqk77i2j" path="res://Assets/skeleton-red_eyes-NESW copie 2.png" id="4_okn3i"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4xw0r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_bdpmr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_qfg6d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_okn3i")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_w8alu"]
+radius = 25.0
+height = 70.0
+
+[node name="Squelette" type="RigidBody2D"]
+position = Vector2(403, 210)
+collision_mask = 0
+gravity_scale = 0.0
+script = ExtResource("1_0cdqg")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-7, -8.25)
+scale = Vector2(1.38889, 1.31132)
+sprite_frames = SubResource("SpriteFrames_4xw0r")
+animation = &"walk"
+frame_progress = 0.900154
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-6, -8)
+shape = SubResource("CapsuleShape2D_w8alu")
