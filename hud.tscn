@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=3 uid="uid://dgphow7hpoyyx"]
+
+[ext_resource type="Script" uid="uid://tl7tupo3qlfu" path="res://Script/hud.gd" id="1_37p78"]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_37p78")
+
+[node name="ScoreLabel" type="Label" parent="."]
+offset_left = 23.0
+offset_top = 10.0
+offset_right = 183.0
+offset_bottom = 179.0
+theme_override_font_sizes/font_size = 60
+text = "Score
+"
+
+[node name="Message" type="Label" parent="."]
+offset_left = 106.0
+offset_top = 369.0
+offset_right = 383.0
+offset_bottom = 407.0
+theme_override_font_sizes/font_size = 20
+text = "ne touchez pas les ennemies"
+
+[node name="StartButton" type="Button" parent="."]
+offset_left = 144.0
+offset_top = 484.0
+offset_right = 328.0
+offset_bottom = 561.0
+theme_override_font_sizes/font_size = 50
+text = "START
+"
+
+[node name="MessageTimer" type="Timer" parent="."]
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="timeout" from="MessageTimer" to="." method="_on_message_timer_timeout"]

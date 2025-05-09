@@ -50,18 +50,18 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0h7mo"]
-radius = 14.0
-height = 66.0
+radius = 20.0
+height = 94.0
 
 [node name="Character" type="Area2D"]
-position = Vector2(240, 653)
+position = Vector2(231, 173)
 script = ExtResource("1_niv5h")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 position = Vector2(-5.5, -11.5)
-scale = Vector2(1.30556, 1.36735)
+scale = Vector2(2, 2.094)
 sprite_frames = SubResource("SpriteFrames_x0ka3")
 animation = &"walk_r"
 

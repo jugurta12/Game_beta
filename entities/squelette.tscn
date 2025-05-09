@@ -58,7 +58,7 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_w8alu"]
 radius = 25.0
-height = 82.0
+height = 98.0
 
 [node name="Squelette" type="RigidBody2D"]
 position = Vector2(403, 210)
@@ -70,10 +70,10 @@ metadata/_edit_group_ = true
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 position = Vector2(-3.61113, -3.84433)
-scale = Vector2(1.60069, 1.48409)
+scale = Vector2(2, 1.854)
 sprite_frames = SubResource("SpriteFrames_4xw0r")
 animation = &"redSquelette"
-frame_progress = 0.439386
+frame_progress = 0.947511
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
 
