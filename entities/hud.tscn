@@ -15,10 +15,10 @@ text = "Score
 "
 
 [node name="Message" type="Label" parent="."]
-offset_left = 106.0
-offset_top = 369.0
-offset_right = 383.0
-offset_bottom = 407.0
+offset_left = 95.0
+offset_top = 154.0
+offset_right = 372.0
+offset_bottom = 192.0
 theme_override_font_sizes/font_size = 20
 text = "ne touchez pas les ennemies"
 
@@ -27,6 +27,7 @@ offset_left = 144.0
 offset_top = 484.0
 offset_right = 328.0
 offset_bottom = 561.0
+theme_override_colors/font_disabled_color = Color(0.855026, 0.757263, 0.960153, 1)
 theme_override_font_sizes/font_size = 50
 text = "START
 "

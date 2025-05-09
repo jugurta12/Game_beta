@@ -32,7 +32,7 @@ func _process(delta):
 	position += velocity * delta
 	position = position.clamp(Vector2.ZERO, screen_size)
 
-func _on_body_entered(body: Node2D) -> void:
+func _on_body_entered(body):
 	hide()
 	hit.emit()  # Émettre le signal hit quand le personnage est touché
 	$CollisionShape2D.set_deferred("disabled", true)  # Désactiver la collision temporairement

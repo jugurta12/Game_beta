@@ -6,7 +6,7 @@ func _ready():
 	pass
 	#new_game() 
 
-func _process(delta) :
+func _process(_delta) :
 	pass
 
 func game_over():

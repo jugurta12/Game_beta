@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bnypuovosgtpm" path="res://Script/main.gd" id="1_bo1nx"]
 [ext_resource type="PackedScene" uid="uid://cx4dlpvswu4rk" path="res://entities/squelette.tscn" id="2_8gbba"]
 [ext_resource type="PackedScene" uid="uid://d0wjc85pgaxmt" path="res://entities/Character.tscn" id="3_8gbba"]
-[ext_resource type="PackedScene" uid="uid://dgphow7hpoyyx" path="res://hud.tscn" id="4_jjvhh"]
+[ext_resource type="PackedScene" uid="uid://dgphow7hpoyyx" path="res://entities/hud.tscn" id="4_jjvhh"]
 [ext_resource type="Texture2D" uid="uid://dv00lqowbh12p" path="res://Assets/ChatGPT Image 21 avr. 2025 à 01_33_41.png" id="5_kry3j"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_21xkr"]
@@ -18,8 +18,9 @@ animations = [{
 }]
 
 [sub_resource type="Curve2D" id="Curve2D_ao2pt"]
+bake_interval = 0.01
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -250, -350, 0, 0, 0, 0, 230, -350, 0, 0, 0, 0, 230, 370, 0, 0, 0, 0, -250, 370, 0, 0, 0, 0, -250, -350)
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10000, 0, 0, 0, 0, 0, 10000, 1136.27, 0, 0, 0, 0, 0, 1136.27, 0, 0, 0, 0, 0, 0)
 }
 point_count = 5
 
@@ -28,7 +29,7 @@ script = ExtResource("1_bo1nx")
 mob_scene = ExtResource("2_8gbba")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(238, 360)
+position = Vector2(239, 356)
 scale = Vector2(0.472656, 0.714844)
 sprite_frames = SubResource("SpriteFrames_21xkr")
 
@@ -36,7 +37,7 @@ sprite_frames = SubResource("SpriteFrames_21xkr")
 position = Vector2(0, 4)
 
 [node name="MobTimer" type="Timer" parent="."]
-wait_time = 0.5
+wait_time = 0.1
 
 [node name="ScoreTimer" type="Timer" parent="."]
 
@@ -45,15 +46,13 @@ wait_time = 2.0
 one_shot = true
 
 [node name="StartPosition" type="Marker2D" parent="."]
-position = Vector2(242, 450)
+position = Vector2(241, 435)
 
 [node name="MobPath" type="Path2D" parent="."]
-position = Vector2(250, 350)
-scale = Vector2(1, 1)
+scale = Vector2(0.048, 0.633653)
 curve = SubResource("Curve2D_ao2pt")
 
 [node name="MobSpawnLocation" type="PathFollow2D" parent="MobPath"]
-position = Vector2(-250, -350)
 
 [node name="HUD" parent="." instance=ExtResource("4_jjvhh")]
 

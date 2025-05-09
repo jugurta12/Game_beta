@@ -54,7 +54,7 @@ radius = 20.0
 height = 94.0
 
 [node name="Character" type="Area2D"]
-position = Vector2(231, 173)
+position = Vector2(172, 457)
 script = ExtResource("1_niv5h")
 metadata/_edit_group_ = true
 
